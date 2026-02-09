@@ -14,30 +14,30 @@
     justify-content: center;
     font-family: 'Segoe UI', sans-serif;
 
-    /* Teddy background */
+    /* CHOCOLATY THEME + TEDDY IMAGE */
     background:
-      linear-gradient(rgba(90, 60, 40, 0.75), rgba(90, 60, 40, 0.75)),
-      url("https://images.unsplash.com/photo-1548092372-0d1bd40894a3?auto=format&fit=crop&w=1200&q=80");
+      linear-gradient(rgba(60, 30, 10, 0.8), rgba(60, 30, 10, 0.8)),
+      url("https://images.unsplash.com/photo-1615484478248-4f5e2d0a7f9b?auto=format&fit=crop&w=1200&q=80");
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     background-repeat: no-repeat;
   }
 
-  /* Soft top curve */
+  /* Chocolate top drip */
   .drip {
     position: absolute;
     top: 0;
     width: 100%;
     height: 80px;
-    background: linear-gradient(#7a4a2e, #5c3a25);
+    background: linear-gradient(#4b250e, #2e1608);
     border-radius: 0 0 40px 40px;
     z-index: 1;
   }
 
-  /* Floating teddy elements */
+  /* Floating teddy & hearts */
   .float {
     position: absolute;
-    animation: floatUp 10s linear infinite;
+    animation: floatUp 9s linear infinite;
     opacity: 0.6;
     z-index: 0;
   }
@@ -48,7 +48,7 @@
     100% { transform: translateY(-10vh); opacity: 0; }
   }
 
-  /* Card */
+  /* Card entrance */
   .card {
     width: 360px;
     height: 540px;
@@ -78,10 +78,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 248, 240, 0.88);
+    backdrop-filter: blur(12px);
+    background: rgba(255, 245, 235, 0.88);
     border-radius: 22px;
-    box-shadow: 0 20px 40px rgba(60, 40, 25, 0.7);
+    box-shadow: 0 20px 40px rgba(40, 20, 5, 0.8);
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@
   }
 
   .front h1 {
-    color: #6b3f26;
+    color: #5a2d0c;
     margin-bottom: 20px;
   }
 
@@ -116,11 +116,11 @@
 
   .back {
     transform: rotateY(180deg);
-    box-shadow: 0 0 45px rgba(200, 150, 100, 0.9);
+    box-shadow: 0 0 55px rgba(255, 200, 120, 0.9);
   }
 
   .back h2 {
-    color: #6b3f26;
+    color: #5a2d0c;
     margin-bottom: 12px;
   }
 
@@ -143,12 +143,12 @@
   .signature {
     margin-top: 18px;
     font-style: italic;
-    color: #6b3f26;
+    color: #5a2d0c;
     font-weight: bold;
   }
 
   .glow {
-    box-shadow: 0 0 60px rgba(255, 220, 180, 1) !important;
+    box-shadow: 0 0 65px rgba(255, 210, 140, 1) !important;
   }
 </style>
 </head>
@@ -163,7 +163,7 @@
     f.innerHTML = Math.random() > 0.5 ? "🧸" : "🤎";
     f.style.left = Math.random() * 100 + "vw";
     f.style.fontSize = (14 + Math.random() * 22) + "px";
-    f.style.animationDuration = (7 + Math.random() * 6) + "s";
+    f.style.animationDuration = (6 + Math.random() * 6) + "s";
     document.body.appendChild(f);
   }
 </script>
