@@ -14,22 +14,22 @@
     justify-content: center;
     font-family: 'Segoe UI', sans-serif;
 
-    /* CHOCOLATY THEME + TEDDY IMAGE */
+    /* Soft romantic teddy theme */
     background:
-      linear-gradient(rgba(60, 30, 10, 0.8), rgba(60, 30, 10, 0.8)),
-      url("https://images.unsplash.com/photo-1615484478248-4f5e2d0a7f9b?auto=format&fit=crop&w=1200&q=80");
+      linear-gradient(rgba(255, 200, 215, 0.7), rgba(255, 180, 200, 0.7)),
+      url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80");
     background-size: cover;
-    background-position: center 30%;
+    background-position: center;
     background-repeat: no-repeat;
   }
 
-  /* Chocolate top drip */
+  /* Decorative top curve */
   .drip {
     position: absolute;
     top: 0;
     width: 100%;
     height: 80px;
-    background: linear-gradient(#4b250e, #2e1608);
+    background: linear-gradient(#ffb6c1, #ff9eb5);
     border-radius: 0 0 40px 40px;
     z-index: 1;
   }
@@ -38,17 +38,17 @@
   .float {
     position: absolute;
     animation: floatUp 9s linear infinite;
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: 0;
   }
 
   @keyframes floatUp {
     0% { transform: translateY(110vh); opacity: 0; }
-    10% { opacity: 0.6; }
+    10% { opacity: 0.7; }
     100% { transform: translateY(-10vh); opacity: 0; }
   }
 
-  /* Card entrance */
+  /* Card */
   .card {
     width: 360px;
     height: 540px;
@@ -79,9 +79,9 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(12px);
-    background: rgba(255, 245, 235, 0.88);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 22px;
-    box-shadow: 0 20px 40px rgba(40, 20, 5, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@
   }
 
   .front h1 {
-    color: #5a2d0c;
+    color: #e75480;
     margin-bottom: 20px;
   }
 
@@ -111,16 +111,16 @@
   .tap {
     margin-top: 14px;
     font-size: 0.9em;
-    color: #6b4a2d;
+    color: #888;
   }
 
   .back {
     transform: rotateY(180deg);
-    box-shadow: 0 0 55px rgba(255, 200, 120, 0.9);
+    box-shadow: 0 0 50px rgba(255, 150, 180, 0.9);
   }
 
   .back h2 {
-    color: #5a2d0c;
+    color: #e75480;
     margin-bottom: 12px;
   }
 
@@ -143,12 +143,12 @@
   .signature {
     margin-top: 18px;
     font-style: italic;
-    color: #5a2d0c;
+    color: #e75480;
     font-weight: bold;
   }
 
   .glow {
-    box-shadow: 0 0 65px rgba(255, 210, 140, 1) !important;
+    box-shadow: 0 0 65px rgba(255, 170, 200, 1) !important;
   }
 </style>
 </head>
@@ -160,7 +160,7 @@
   for (let i = 0; i < 22; i++) {
     let f = document.createElement("div");
     f.className = "float";
-    f.innerHTML = Math.random() > 0.5 ? "🧸" : "🤎";
+    f.innerHTML = Math.random() > 0.5 ? "🧸" : "💗";
     f.style.left = Math.random() * 100 + "vw";
     f.style.fontSize = (14 + Math.random() * 22) + "px";
     f.style.animationDuration = (6 + Math.random() * 6) + "s";
